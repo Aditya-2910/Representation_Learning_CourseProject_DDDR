@@ -1,4 +1,4 @@
-GPU_LIST=('0' '1' '2' '3')
+GPU_LIST=('0')
 PID_LIST=()
 for i in ${GPU_LIST[*]};
 do

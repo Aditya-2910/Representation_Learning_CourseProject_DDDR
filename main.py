@@ -74,9 +74,12 @@ if __name__ == '__main__':
     args.num_class = 200 if args.dataset=="tiny_imagenet" else 100 
     args.init_cls = int(args.num_class / args.tasks)
     args.increment = args.init_cls
+    print("Hello this is done")
     if args.exp_name == "":
         args.exp_name = time.strftime("%Y%m%d_%H%M%S", time.localtime())
     args.exp_name = f"beta_{args.beta}_tasks_{args.tasks}_seed_{args.seed}_sigma_{args.g_sigma}_{args.exp_name}"
+    print("Hello this is not done")
+    
     args.save_dir = os.path.join(args.save_dir, args.method, args.dataset, args.exp_name)
     args = vars(args)
     train(args)
